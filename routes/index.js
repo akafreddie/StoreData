@@ -38,7 +38,7 @@ router.get('/getAllOrders', controllerMongoCollection.getAllOrders);
 //**************************************************************************
 //***** mongodb get all of the Routes in Routes collection where frequence>=1
 //      and sort by the name of the route.  Render information in the views/pages/mongodb.ejs
-XXX.get('/mongodb', function (request, response) {
+router.get('/mongodb', function (request, response) {
 
     mongodb.MongoClient.connect(mongoDBURI, function(err,  client) {
         if(err) throw err;
