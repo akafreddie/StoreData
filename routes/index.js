@@ -33,7 +33,7 @@ router.post('/StoreData', function(req, res, next) {
 //**************************************************************************
 //***** mongodb get all of the Routes in Routes collection w
 //      and Render information iwith an ejs view
-router.get('/getAllOrders', controllerMongoCollection.getAllRoutes);
+router.get('/getAllOrders', controllerMongoCollection.getAllOrders);
 
 //**************************************************************************
 //***** mongodb get all of the Routes in Routes collection where frequence>=1
