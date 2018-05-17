@@ -7,7 +7,6 @@ var mongodb = require('mongodb');
 var mongoDBURI = process.env.MONGODB_URI || 'mongodb://aanzures:mma#1996Aas@ds053708.mlab.com:53708/heroku_25f1f6ms\'';
 
 //LOAD the various controllers
-var controllerMain = require('../controllers/main');   //this will load the main controller file
 var controllerMongoCollection = require('../controllers/database'); //load controller code dealing with database mongodb and Routes collection
 
 
