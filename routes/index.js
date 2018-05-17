@@ -1,10 +1,10 @@
-module.exports = router;
-
-
 var express = require('express');
 var router = express.Router();
 var mongodb = require('mongodb');
 var mongoDBURI = process.env.MONGODB_URI || 'mongodb://aanzures:mma#1996Aas@ds053708.mlab.com:53708/heroku_25f1f6ms\'';
+
+
+module.exports = router;
 
 //LOAD the various controllers
 var controllerMongoCollection = require('../controllers/database'); //load controller code dealing with database mongodb and Routes collection
