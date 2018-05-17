@@ -52,7 +52,7 @@ module.exports.getAllOrders =  function (request, response) {
 
 
         //close connection when your app is terminating.
-        db.close(function (err) {
+        theDatabase.close(function (err) {
             if(err) throw err;
         });
     });//end of connect
