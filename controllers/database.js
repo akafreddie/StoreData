@@ -39,7 +39,7 @@ module.exports.getAllOrders =  function (request, response) {
         Routes.find().toArray(function (err, docs) {
             if(err) throw err;
 
-            response.render('getAllOrders', {title: docs});  //change back title to the name results
+            response.render('getAllOrders', {results: docs});  //was tittle changed to results and have to change getAllOrders.
 
         });
 
