@@ -7,13 +7,13 @@ views/getAllOrders.ejs
 </head>
 <body>
 <div class="container">
-  <h2>Database Results getting Routes </h2>
+  <h2>Database Results: </h2>
   <ul>
     <% results.forEach(function(r) { %>
     <li><%= r.name %> - <%= r.frequency %></li>
     <ul>
-      <li>From:( <%=r.START_Longitude %>, <%=r.START_Latitude %> )</li>
-      <li>TO: ( <%=r.END_Longitude %>,<%=r.END_Latitude %> ) </li>
+      <li>Billing & ID: <%=r.BILLING_ID %>, <%=r.CUSTOMER_ID %> </li>
+      <li>Date & Total Order: ( <%=r.DATE %>,<%=r.ORDER_TOTAL %> </li>
     </ul>
     <br/><br/>
     <% }); %>
