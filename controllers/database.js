@@ -20,34 +20,7 @@ module.exports.StoreData =  function (request, response) {
 
         //get collection of routes
         var Routes = theDatabase.collection('ORDERS');
-        var Routes = theDatabase.collection('SHIPPING');
-        var Routes = theDatabase.collection('BILLING');
-        var Routes = theDatabase.collection('CUSTOMERS');
-
-        //now processing post
-        router.post('/StoreData', function(req, res, next) {
-//expecting data variable called order--retrieve value using body-parser
-            var value_name = req.body.order  //retrieve the data associated with order
-            res.send("order succesfully received: " + value_name);
-        });
-
-        var bodyParser = require('body-parser');
-        var path = require ('path'); //to work with separtors on any OS including Windows
-        var querystring = require('querystring'); //for use in GET Query string of form URI/path?name=value
-
-        router.use(bodyParser.json()); // for parsing application/json
-        router.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencode
-//#########################################
-
-        router.get('/StoreData', function(req, res, next) {
-            //expecting data variable called name --retrieve value using body-parser
-            var body = JSON.stringify(req.body);  //if wanted entire body as JSON
-            var params = JSON.stringify(req.params);//if wanted parameters
-            var query = req.query;  //if wanted the query
-            var value_name = req.query.name;  //retrieve the data associated with name
-            res.send("hello " + value_name);
-        });
-
+        
 
         //FIRST showing you one way of making request for ALL routes and cycle through with a forEach loop on returned Cursor
         //   this request and loop  is to display content in the  console log
