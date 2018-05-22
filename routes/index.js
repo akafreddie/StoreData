@@ -1,8 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var mongodb = require('mongodb');
-var mongoDBURI = process.env.MONGODB_URI || 'mongodb://aanzures:mma#1996Aas@ds053708.mlab.com:53708/heroku_25f1f6ms\'';
-
 
 module.exports = router;
 
@@ -17,11 +14,11 @@ router.get('/', function(req, res, next) {
 });
 
 //now processing post
-router.post('/StoreData', function(req, res, next) {
+//router.post('/StoreData', function(req, res, next) {
 //expecting data variable called order--retrieve value using body-parser
-    var value_name = req.body.order  //retrieve the data associated with order
-    res.send("order succesfully received: " + value_name);
-});
+  //  var value_name = req.body.order  //retrieve the data associated with order
+    //res.send("order succesfully received: " + value_name);
+//});
 
 
 //CODE to route /getAllRoutes to appropriate  Controller function
@@ -29,11 +26,12 @@ router.post('/StoreData', function(req, res, next) {
 //***** mongodb get all of the Routes in Routes collection w
 //      and Render information iwith an ejs view
 router.get('/getAllOrders', controllerMongoCollection.getAllOrders);
+router.post('/StoreData', controllerMongoCollection.StoreData);
 
 //**************************************************************************
 //***** mongodb get all of the Routes in Routes collection where frequence>=1
 //      and sort by the name of the route.  Render information in the views/pages/mongodb.ejs
-router.get('/mongodb', function (request, response) {
+/*router.get('/mongodb', function (request, response) {
 
     mongodb.MongoClient.connect(mongoDBURI, function(err,  client) {
         if(err) throw err;
@@ -57,4 +55,4 @@ router.get('/mongodb', function (request, response) {
         });
     });//end of connect
 
-});//end XXX.get
+});//end XXX.get*/
