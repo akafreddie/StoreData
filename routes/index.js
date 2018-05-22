@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-module.exports = router;
 
 //LOAD the various controllers
 var controllerMongoCollection = require('../controllers/database'); //load controller code dealing with database mongodb and Routes collection
@@ -13,6 +12,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+module.exports = router;
 //now processing post
 //router.post('/StoreData', function(req, res, next) {
 //expecting data variable called order--retrieve value using body-parser
