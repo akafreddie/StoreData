@@ -99,13 +99,13 @@ module.exports.StoreData = function(request, response){
             if (err) throw err;
         });
 
-        /*Orders.find({}).toArray(function (err, docs) {
+        Orders.find({}).toArray(function (err, docs) {
             if(err) throw err;
 
             response.render('StoreData', {results: docs});
 
         });
-*/
+
         //close connection when your app is terminating
         client.close(function (err) {
             if(err) throw err;
