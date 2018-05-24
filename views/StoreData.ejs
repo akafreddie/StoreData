@@ -1,4 +1,4 @@
-views/StoreData.ejs
+Order Successful
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +12,6 @@ views/StoreData.ejs
         <% results.forEach(function(r) { %>
         <li><%= r.name %> - <%= r.frequency %></li>
         <ul>
-            <li>Customer ID: <%=r.CUSTOMER_ID %> </li>
-            <li>Billing ID: <%=r.BILLING_ID %> </li>
-            <li>Shipping ID: <%=r.BILLING_ID%></li>
-            <li>DATE: <%=r.DATE%></li>
-            <li>Product Vector: <%r.prod%></li>
-            <li>Order Total: <%r.ORDER_TOTAL%></li>
         </ul>
         <br/><br/>
         <% }); %>
